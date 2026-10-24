@@ -1,0 +1,103 @@
+{
+  "notice": "DEMO DATA: these sample policies are fictional and are not commitments from any real company. Replace them with your own FAQs before going live.",
+  "entries": [
+    {
+      "id": "shipping-delivery-times",
+      "category": "Shipping & delivery",
+      "question": "How long does shipping take?",
+      "answer": "Standard shipping takes 3-5 business days after your order is dispatched, and express shipping takes 1-2 business days. Orders placed before 2:00 PM on a business day are dispatched the same day; later orders go out the next business day. Delivery can take longer during sales events or severe weather.",
+      "keywords": ["shipping", "ship", "shipped", "shipment", "delivery", "deliver", "delivered", "dispatch", "delivery time", "shipping time", "arrive", "arrival", "standard shipping", "express shipping", "delayed", "late"]
+    },
+    {
+      "id": "shipping-costs",
+      "category": "Shipping & delivery",
+      "question": "How much does shipping cost?",
+      "answer": "Standard shipping is $4.99 per order, and orders over $50 ship free. Express shipping is $12.99. International shipping is not available.",
+      "keywords": ["shipping cost", "shipping fee", "shipping rate", "shipping price", "free shipping", "delivery charge", "delivery fee", "express", "international shipping", "ship abroad", "ship overseas", "cost", "price"]
+    },
+    {
+      "id": "return-eligibility",
+      "category": "Returns",
+      "question": "Which items can I return?",
+      "answer": "Most items can be returned within 30 days of delivery if they are unused, in their original packaging, and come with proof of purchase. Final-sale items, gift cards, and personalised products cannot be returned.",
+      "keywords": ["return", "returns", "returnable", "return policy", "return window", "eligible", "eligibility", "30 days", "send back", "exchange", "final sale", "gift card"]
+    },
+    {
+      "id": "return-process",
+      "category": "Returns",
+      "question": "How do I start a return?",
+      "answer": "Sign in to your account, open Orders, select the item, and choose Start return. We will email you a prepaid return label. Drop the parcel at any listed carrier location within 14 days of requesting the return.",
+      "keywords": ["start a return", "return label", "return process", "how to return", "return shipping", "prepaid label", "return request", "return item", "send back", "return"]
+    },
+    {
+      "id": "refund-processing",
+      "category": "Refunds",
+      "question": "When will I receive my refund?",
+      "answer": "Refunds are issued to your original payment method within 5-7 business days after we receive and inspect your return. Your bank may need extra time to show the credit. Original shipping fees are non-refundable unless the item was damaged or incorrect.",
+      "keywords": ["refund", "refunds", "refunded", "money back", "reimburse", "reimbursement", "credit back", "refund status", "refund time", "chargeback"]
+    },
+    {
+      "id": "payment-methods",
+      "category": "Payments",
+      "question": "Which payment methods do you accept?",
+      "answer": "We accept Visa, Mastercard, American Express, PayPal, Apple Pay, and Google Pay. We do not accept cash on delivery, cheques, or cryptocurrency.",
+      "keywords": ["payment", "payments", "pay", "paying", "payment method", "payment methods", "credit card", "debit card", "card", "visa", "mastercard", "amex", "american express", "paypal", "apple pay", "google pay", "cash on delivery", "cod", "crypto", "bitcoin", "accept"]
+    },
+    {
+      "id": "order-tracking",
+      "category": "Orders",
+      "question": "How can I track my order?",
+      "answer": "Once your order ships, we email you a tracking number and link. You can also open Orders in your account and select Track package. Tracking can take up to 24 hours after dispatch to show its first update.",
+      "keywords": ["track", "tracking", "track order", "tracking number", "tracking link", "order status", "where is my order", "shipment status", "package location", "track package", "status"]
+    },
+    {
+      "id": "order-cancellation",
+      "category": "Orders",
+      "question": "Can I cancel or change my order?",
+      "answer": "You can cancel or edit an order within 1 hour of placing it from Orders in your account. After that the order may already be in packing; once it arrives you can start a return instead.",
+      "keywords": ["cancel", "cancellation", "cancelled", "cancel order", "change order", "edit order", "modify order", "change address", "wrong address", "shipping address"]
+    },
+    {
+      "id": "damaged-products",
+      "category": "Damaged or wrong items",
+      "question": "What should I do if my item arrives damaged or defective?",
+      "answer": "Contact us within 7 days of delivery with your order number and photos of the damage and the packaging. Once the claim is approved we will send a free replacement or a full refund, including the original shipping fee.",
+      "keywords": ["damaged", "damage", "broken", "defective", "defect", "faulty", "crushed", "cracked", "wrong item", "incorrect item", "arrived damaged", "not working", "replacement"]
+    },
+    {
+      "id": "missing-packages",
+      "category": "Damaged or wrong items",
+      "question": "My tracking says delivered but I can't find my package. What should I do?",
+      "answer": "First check around your property, with neighbours, and with your building's front desk, since carriers sometimes leave parcels nearby. If it is still missing 2 business days after the delivered scan, contact support with your order number. We will open a carrier investigation and reship or refund the order if the parcel cannot be located.",
+      "keywords": ["missing", "lost", "package missing", "lost package", "not received", "never arrived", "didn't arrive", "hasn't arrived", "delivered but not received", "stolen", "can't find my package", "where is my package"]
+    },
+    {
+      "id": "product-availability",
+      "category": "Products",
+      "question": "How do I know if a product is in stock?",
+      "answer": "Each product page shows live stock status. If an item shows Out of stock, select Notify me and we will email you when it returns. We cannot reserve items or confirm restock dates.",
+      "keywords": ["stock", "in stock", "out of stock", "availability", "available", "restock", "back in stock", "sold out", "notify me", "backorder", "pre-order"]
+    },
+    {
+      "id": "warranty",
+      "category": "Products",
+      "question": "Do your products come with a warranty?",
+      "answer": "Most products include a 12-month limited warranty against manufacturing defects, starting on the delivery date. It does not cover accidental damage, misuse, or normal wear. To make a claim, contact support with your order number and a description of the issue.",
+      "keywords": ["warranty", "warranties", "guarantee", "guaranteed", "manufacturing defect", "warranty claim", "coverage", "covered", "repair"]
+    },
+    {
+      "id": "contact-support",
+      "category": "Support",
+      "question": "How can I contact customer support?",
+      "answer": "You can email support@example.com or use this chat for common questions. Our team replies within one business day. Please include your order number to speed things up.",
+      "keywords": ["contact", "contact support", "customer service", "customer support", "support team", "email", "speak to a human", "talk to an agent", "human agent", "help desk", "complaint"]
+    },
+    {
+      "id": "business-hours",
+      "category": "Support",
+      "question": "What are your support hours?",
+      "answer": "Our support team is available Monday to Friday, 9:00 AM-6:00 PM Eastern Time, excluding public holidays. Emails sent outside these hours are answered the next business day. This chat is available 24/7 for common questions.",
+      "keywords": ["hours", "business hours", "support hours", "opening hours", "working hours", "open", "closed", "holiday", "holidays", "weekend", "weekends", "when are you open"]
+    }
+  ]
+}

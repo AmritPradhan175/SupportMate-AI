@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/*
+ * SupportMate AI palette
+ * ink   - deep navy surfaces, from page background (950) up to raised elements and borders (500)
+ * mist  - cool lavender-grey text, 50 = headings, 300 = body, 400 = muted (all >= 6:1 on ink-900)
+ * aqua  - cyan reserved for "grounded in the knowledge base" signals (sources, ready state)
+ * Primary actions use Tailwind indigo-600 -> violet-600 so white text keeps >= 5:1 contrast.
+ */
+@theme inline {
+  --color-ink-950: #060a18;
+  --color-ink-900: #0a1024;
+  --color-ink-800: #0f1833;
+  --color-ink-700: #172245;
+  --color-ink-600: #222f62;
+  --color-ink-500: #3a4890;
+
+  --color-mist-50: #f1f3ff;
+  --color-mist-200: #d6dbf8;
+  --color-mist-300: #b7bfe8;
+  --color-mist-400: #939dd2;
+
+  --color-aqua-300: #7ceafc;
+  --color-aqua-400: #22d3ee;
+  --color-mint-400: #34d399;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-ink-950);
+  background-image:
+    radial-gradient(56rem 34rem at 8% -12%, rgb(99 102 241 / 0.32), transparent 64%),
+    radial-gradient(48rem 32rem at 96% -6%, rgb(139 92 246 / 0.26), transparent 60%),
+    radial-gradient(40rem 26rem at 50% 118%, rgb(34 211 238 / 0.09), transparent 62%);
+  background-attachment: fixed;
+  color: var(--color-mist-200);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgb(139 92 246 / 0.45);
+  color: #fff;
+}
+
+/* Visible keyboard focus everywhere (in the base layer so utilities such as focus:outline-none can override it) */
+@layer base {
+  :where(a, button, textarea, [tabindex]):focus-visible {
+    outline: 2px solid #a5b4fc;
+    outline-offset: 2px;
+  }
+}
+
+/* Slim scrollbars that match the navy theme */
+.scroll-area {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ink-500) transparent;
+}
+
+@keyframes typing-dot {
+  0%,
+  60%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+.typing-dot {
+  animation: typing-dot 1.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
