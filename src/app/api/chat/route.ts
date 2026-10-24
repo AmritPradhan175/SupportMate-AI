@@ -88,7 +88,7 @@ export async function POST(request: Request): Promise<NextResponse> {
     rawOutput = await generateRawAnswer(message, retrievedFaqs);
   } catch (error) {
     const llmError = error instanceof LlmError ? error : new LlmError("provider", "Unexpected failure while calling the model.");
-    console.error("[api/chat] model call failed", { kind: llmError.kind, detail: llmError.message });
+    console.error(`[api/chat] model call failed (${llmError.kind}): ${llmError.message}`);
     return llmFailureResponse(llmError);
   }
 

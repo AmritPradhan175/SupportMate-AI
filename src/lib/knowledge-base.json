@@ -98,6 +98,13 @@
       "question": "What are your support hours?",
       "answer": "Our support team is available Monday to Friday, 9:00 AM-6:00 PM Eastern Time, excluding public holidays. Emails sent outside these hours are answered the next business day. This chat is available 24/7 for common questions.",
       "keywords": ["hours", "business hours", "support hours", "opening hours", "working hours", "open", "closed", "holiday", "holidays", "weekend", "weekends", "when are you open"]
+    },
+    {
+      "id": "general-help",
+      "category": "General",
+      "question": "How can SupportMate AI help me?",
+      "answer": "SupportMate AI is your customer support assistant. I can help answer questions about store policies and orders, including shipping delivery times, shipping costs, returns, refunds, payment methods, order tracking, order cancellations, damaged or missing items, product availability, warranty claims, and how to reach human support.",
+      "keywords": ["hello", "hi", "hey", "help", "support", "assist", "assistance", "what can you do", "who are you", "how does this work", "about"]
     }
   ]
 }
