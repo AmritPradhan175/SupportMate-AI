@@ -51,8 +51,15 @@ export type ParsedModelOutput =
 
 function stripCodeFence(text: string): string {
   const trimmed = text.trim();
-  const match = /^```(?:json)?\s*([\s\S]*?)\s*```$/i.exec(trimmed);
-  return match ? match[1] : trimmed;
+  const fenceMatch = /```(?:json)?\s*([\s\S]*?)\s*```/i.exec(trimmed);
+  if (fenceMatch) {
+    return fenceMatch[1].trim();
+  }
+  const jsonObjectMatch = /\{[\s\S]*\}/.exec(trimmed);
+  if (jsonObjectMatch) {
+    return jsonObjectMatch[0].trim();
+  }
+  return trimmed;
 }
 
 /**
@@ -117,8 +124,9 @@ export function parsePositiveInt(value: string | undefined, fallback: number): n
 
 /** Reads required server variables. Throws an LlmError("config") naming what is missing. */
 export function getServerEnv(env: NodeJS.ProcessEnv = process.env): ServerEnv {
+  const apiKey = env.GEMINI_API_KEY ?? env.GOOGLE_API_KEY;
   const result = serverEnvSchema.safeParse({
-    GEMINI_API_KEY: env.GEMINI_API_KEY,
+    GEMINI_API_KEY: apiKey,
     GEMINI_MODEL: env.GEMINI_MODEL,
   });
 

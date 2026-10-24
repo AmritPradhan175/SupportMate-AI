@@ -54,8 +54,14 @@ function toLlmError(error: unknown, apiKey: string, timedOut: boolean): LlmError
     return new LlmError("timeout", "Gemini request timed out.");
   }
 
-  if (error instanceof ApiError) {
-    const status = error.status;
+  const status =
+    error instanceof ApiError
+      ? error.status
+      : typeof error === "object" && error !== null && "status" in error && typeof (error as { status: unknown }).status === "number"
+        ? (error as { status: number }).status
+        : undefined;
+
+  if (status !== undefined) {
     if (status === 429) return new LlmError("quota", `Gemini quota or rate limit reached (status ${status}).`);
     if (status === 401 || status === 403 || (status === 400 && /api key/i.test(message))) {
       return new LlmError("config", `Gemini rejected the API key (status ${status}).`);
